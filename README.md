@@ -5,7 +5,7 @@
 </div>
 <h1 align="center">AB Download Manager</h1>
 <p align="center">
-    <a href="https://github.com/amir1376/ab-download-manager/releases/latest"><img alt="GitHub Release" src="https://img.shields.io/github/v/release/amir1376/ab-download-manager?color=greenlight&label=latest%20release"></a>
+    <a href="https://github.com/amir1376/ab-download-manager"><img alt="Original GitHub Repo" src="https://img.shields.io/github/v/release/amir1376/ab-download-manager?color=greenlight&label=latest%20release"></a>
     <a href="https://abdownloadmanager.com"><img alt="AB Download Manager Website" src="https://img.shields.io/badge/project-website-purple?&labelColor=gray"></a>
     <a href="https://t.me/abdownloadmanager_discussion"><img alt="Telegram Group" src="https://img.shields.io/badge/Telegram-Group-blue?logo=telegram&labelColor=gray"></a>
     <a href="https://t.me/abdownloadmanager"><img alt="Telegram Channel" src="https://img.shields.io/badge/Telegram-Channel-blue?logo=telegram&labelColor=gray"></a>
@@ -43,26 +43,6 @@ Please visit [Project Website](https://abdownloadmanager.com) for more info.
 
 ```bash
 bash <(curl -fsSL https://raw.githubusercontent.com/amir1376/ab-download-manager/master/scripts/install.sh)
-```
-
-#### Winget or Scoop (for Windows)
-
-**winget**:
-
-```bash
-winget install amir1376.ABDownloadManager
-```
-
-**scoop**:
-
-```bash
-scoop install extras/abdownloadmanager
-```
-
-#### Homebrew (for macOS & Linux)
-
-```bash
-brew tap amir1376/tap && brew install --cask ab-download-manager
 ```
 
 > ⚠️ **Warning:** This software is NOT on Google Play or other app stores unless listed here. Any version **claiming to be or related to this project** should be considered SCAM and UNSAFE.
