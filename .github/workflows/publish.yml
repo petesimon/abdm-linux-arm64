@@ -42,14 +42,6 @@ jobs:
         run: |
           echo "SKIP_ANDROID_BUILD=true" >> $GITHUB_ENV
 
-      - name: Use Android Secrets
-        if: matrix.os == 'ubuntu-latest'
-        run: |
-          echo "ABDM_KEYSTORE_FILE=${{ secrets.ABDM_KEYSTORE_FILE }}" >> $GITHUB_ENV
-          echo "ABDM_KEYSTORE_FILE_PASSWORD=${{ secrets.ABDM_KEYSTORE_FILE_PASSWORD }}" >> $GITHUB_ENV
-          echo "ABDM_KEYSTORE_KEY_ALIAS=${{ secrets.ABDM_KEYSTORE_KEY_ALIAS }}" >> $GITHUB_ENV
-          echo "ABDM_KEYSTORE_KEY_PASSWORD=${{ secrets.ABDM_KEYSTORE_KEY_PASSWORD }}" >> $GITHUB_ENV
-
       - name: Gradle
         run: |
           ./gradlew
@@ -72,7 +64,7 @@ jobs:
           name: app-${{ matrix.os }}
 
   release:
-    runs-on: "ubuntu-latest"
+    runs-on: [ "ubuntu-latest" , "ubuntu-24.04-arm" ]
     needs: [ "create-packages" ]
     steps:
       - uses: "actions/download-artifact@v4"
