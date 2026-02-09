@@ -64,7 +64,7 @@ jobs:
           name: app-${{ matrix.os }}
 
   release:
-    runs-on: [ "ubuntu-latest" , "ubuntu-24.04-arm" ]
+    runs-on: "ubuntu-24.04-arm"
     needs: [ "create-packages" ]
     steps:
       - uses: "actions/download-artifact@v4"
