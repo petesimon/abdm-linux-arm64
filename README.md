@@ -10,6 +10,13 @@
     <a href="https://crowdin.com/project/ab-download-manager"><img alt="Crowdin" src="https://badges.crowdin.net/ab-download-manager/localized.svg"></a>
 </p>
 
+## Problems and Discussion
+
+Report problems or just chat in the ["Discussions"](https://github.com/petesimon/abdm-linux-arm64/discussions) page.
+
+
+THE SYSTEM IS DOWN [![THE SYSTEM IS DOWN](https://img.youtube.com/vi/Gs1O9EEqEZs/mqdefault.jpg)](https://youtu.be/Gs1O9EEqEZs)
+
 ## Description
 
 [AB Download Manager](https://abdownloadmanager.com) is a desktop app that helps you manage and organize your downloads more efficiently than ever before.
