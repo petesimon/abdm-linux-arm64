@@ -98,7 +98,7 @@ There are multiple repositories related to the **AB Download Manager** project:
 
 | Repository                                                                                 | Description                                                                   |
 |--------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
-| [Main Application](https://github.com/amir1376/ab-download-manager) (You are here)         | Contains the  **Application** that runs on your  **device**                   |
+| [Main Application](https://github.com/petesimon/abdm-linux-arm64) (You are here)           | Contains the  **Application** that runs on your  **device**                   |
 | [Browser Integration](https://github.com/amir1376/ab-download-manager-browser-integration) | Contains the **Browser Extension** to be installed on your  **browser**       |
 | [Website](https://github.com/amir1376/ab-download-manager-website)                         | Contains the **AB Download Manager** [website](https://abdownloadmanager.com) |
 
