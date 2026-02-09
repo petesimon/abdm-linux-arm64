@@ -1,14 +1,20 @@
 <div align="center">
-    <img width="180" src="assets/logo/app_logo_with_background.svg" alt="AB Download Manager Logo">
+    <img width="80" src="assets/logo/app_logo_with_background.svg" alt="AB Download Manager Logo">
 </div>
-<h1 align="center">AB Download Manager - for only Linux arm64 (aarch64)</h1>
+<h2 align="center">AB Download Manager - for Linux arm64 (aarch64)</h1>
 <p align="center">
-    <a href="."><img alt="Original GitHub Repo" src="https://img.shields.io/github/v/release/amir1376/ab-download-manager?color=greenlight&label=latest%20release"></a>
+    <a href="https://github.com/amir1376/ab-download-manager/releases"><img alt="Original GitHub Repo" src="https://img.shields.io/github/v/release/amir1376/ab-download-manager?color=greenlight&label=latest%20release"></a>
     <a href="https://abdownloadmanager.com"><img alt="AB Download Manager Website" src="https://img.shields.io/badge/project-website-purple?&labelColor=gray"></a>
     <a href="https://t.me/abdownloadmanager_discussion"><img alt="Telegram Group" src="https://img.shields.io/badge/Telegram-Group-blue?logo=telegram&labelColor=gray"></a>
     <a href="https://t.me/abdownloadmanager"><img alt="Telegram Channel" src="https://img.shields.io/badge/Telegram-Channel-blue?logo=telegram&labelColor=gray"></a>
     <a href="https://crowdin.com/project/ab-download-manager"><img alt="Crowdin" src="https://badges.crowdin.net/ab-download-manager/localized.svg"></a>
 </p>
+
+## Sponsor or donate
+
+Please [sponsor me in Github](https://github.com/sponsors/petesimon), or [donate to me](https://paypal.me/psvangorp) via paypal , or [donate to me](https://www.buymeacoffee.com/pitapitabread) via buymeacoffee. Thanks!
+
+Also [donate](https://github.com/amir1376/ab-download-manager/blob/master/DONATE.md) crytocurrency to the original author @amir1376 at this link https://github.com/amir1376/ab-download-manager/blob/master/DONATE.md
 
 ## Problems and Discussion
 
