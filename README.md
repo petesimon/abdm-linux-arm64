@@ -12,10 +12,9 @@
 
 ## Problems and Discussion
 
-Report problems or just chat in the ["Discussions"](https://github.com/petesimon/abdm-linux-arm64/discussions) page.
+Report problems with Linux arm64 or just chat about whatever in the ["Discussions"](https://github.com/petesimon/abdm-linux-arm64/discussions) page.
 
-
-THE SYSTEM IS DOWN [![THE SYSTEM IS DOWN](https://img.youtube.com/vi/Gs1O9EEqEZs/mqdefault.jpg)](https://youtu.be/Gs1O9EEqEZs)
+[![THE SYSTEM IS DOWN](https://img.youtube.com/vi/Gs1O9EEqEZs/mqdefault.jpg)](https://youtu.be/Gs1O9EEqEZs) *♫ ♪ THE SYSTEM IS DOWN ♫ ♪*
 
 ## Description
 
@@ -115,7 +114,7 @@ If you like my work, please consider giving it a ⭐ — thanks! ❤️
 
 ## Bug Report
 
-If you notice any bugs in the source code, please report them via the `GitHub Issues` section.
+If you notice any bugs in the source code, please report them via the [GitHub Issues](https://github.com/amir1376/ab-download-manager/issues) section in the original repository which belongs to @amir1376.
 
 ## Build From Source
 
