@@ -38,7 +38,13 @@ Please visit [Project Website](https://abdownloadmanager.com) for more info.
 <a href="https://abdownloadmanager.com"><img src="https://img.shields.io/badge/Official%20Website-897BFF?logo=abdownloadmanager&logoColor=fff&style=flat-square" alt="Official Website" height="32" /></a>
 <a href="https://github.com/petesimon/abdm-linux-arm64"><img src="https://img.shields.io/badge/GitHub%20Releases-2a2f36?logo=github&logoColor=fff&style=flat-square" alt="GitHub Releases" height="32" /></a>
 
-#### * DO NOT USE NOW - Installation script (Linux)
+#### Download a tar.gz file for Linux arm64 (aarch64) from the `releases` page
+
+A list of available files on github is in the [releases page HERE](https://github.com/petesimon/abdm-linux-arm64/releases)
+
+After you download a tar.gz file, then extract the contents and navigate into the folder `ABDownloaderManager`. Execute the file `bin/ABDownloaderManager`
+
+#### * DO NOT USE THE SCRIPT FOR arm64 * - Installation script (Linux)
 
 ```bash
 bash <(curl -fsSL https://raw.githubusercontent.com/amir1376/ab-download-manager/master/scripts/install.sh)
