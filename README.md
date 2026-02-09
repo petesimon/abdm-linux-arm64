@@ -83,11 +83,20 @@ You can download the browser extension to integrate the app with your browser.
 
 <div align="center">
 <picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/screenshots/abdm-linux-arm64-fastfetch-1080p-screenshot3-crop.jpg">
+  <a href="./assets/screenshots/abdm-linux-arm64-fastfetch-1080p-screenshot3-crop.jpg"><img alt="App Home Section" src="./assets/screenshots/abdm-linux-arm64-fastfetch-1080p-screenshot3-crop.jpg"></a>
+</picture>
+</div>
+
+<div align="center">
+<picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/screenshots/app-home_dark.png">
   <source media="(prefers-color-scheme: light)" srcset="./assets/screenshots/app-home_light.png">
   <img alt="App Home Section" src="./assets/screenshots/app-home_dark.png">
 </picture>
+</div>
 
+<div align="center">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/screenshots/app-download_dark.png">
   <source media="(prefers-color-scheme: light)" srcset="./assets/screenshots/app-download_light.png">
