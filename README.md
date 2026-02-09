@@ -84,7 +84,8 @@ You can download the browser extension to integrate the app with your browser.
 <div align="center">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/screenshots/abdm-linux-arm64-fastfetch-1080p-screenshot3-crop.jpg">
-  <a href="./assets/screenshots/abdm-linux-arm64-fastfetch-1080p-screenshot3-crop.jpg"><img alt="App Home Section" src="./assets/screenshots/abdm-linux-arm64-fastfetch-1080p-screenshot3-crop.jpg"></a>
+  <a href="https://raw.githubusercontent.com/petesimon/abdm-linux-arm64/master/assets/screenshots/abdm-linux-arm64-fastfetch-1080p-screenshot3-crop.jpg">
+      <img alt="App Home Section" src="./assets/screenshots/abdm-linux-arm64-fastfetch-1080p-screenshot3-crop.jpg"></a>
 </picture>
 </div>
 
