@@ -50,10 +50,12 @@ A list of available files on github is in the [releases page HERE](https://githu
 
 After you download a tar.gz file, then extract the contents and navigate into the folder `ABDownloaderManager` and `bin`. Execute the file `ABDownloaderManager`
 
-#### * DO _NOT_ USE THE SCRIPT FOR arm64 * - Installation script (Linux)
+#### Installation script for Linux arm64 / armv8 / aarch64
+
+Copy the text below, then paste and run the command in a Terminal.
 
 ```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/amir1376/ab-download-manager/master/scripts/install.sh)
+bash < (curl -fsSL https://raw.githubusercontent.com/petesimon/abdm-linux-arm64/master/scripts/install.sh)
 ```
 
 > ⚠️ **Warning:** This software is NOT on Google Play or other app stores unless listed here. Any version **claiming to be or related to this project** should be considered SCAM and UNSAFE.

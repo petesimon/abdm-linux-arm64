@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-# Downloads the latest tarball from https://github.com/amir1376/ab-download-manager/releases and unpacks it into ~/.local/.
+# Modified by @petesimon https://github.com/petesimon for Linux arm64 (aarch64)
+#
+# Downloads the latest tarball from https://github.com/petesimon/abdm-linux-arm64/releases and unpacks it into ~/.local/
 # Creates a .desktop entry for the app in ~/.local/share/applications based on FreeDesktop specifications.
 
 set -euo pipefail
@@ -50,8 +52,16 @@ detect_package_manager() {
     elif [ -f /etc/debian_version ]; then
         local OS=Debian
     else
-        logger error "Your Linux Distro is not Supperted."
-        logger error "Please install ${DEPENDENCIES[@]} Manually."
+        logger error "Your Linux Distribution is not supported."
+        logger error "Please install ${DEPENDENCIES[@]} manually."
+        logger error "Please install AB Download Manager manually."
+        exit 1
+    fi
+
+    # detect architecture. exit if not aarch64
+    if [[ "$(uname -m)" != "aarch64" ]]; then
+        logger error "This edition of AB Download Manager is for Linux arm64 / aarch64 / armv8"
+        logger error "Your architecture is not supported. Exiting."
         exit 1
     fi
 
@@ -101,11 +111,14 @@ check_dependencies() {
 
 APP_NAME="ABDownloadManager"
 PLATFORM="linux"
-ARCH="x64"
+# edit: remove "x64", add "arm64"
+# in the future, use "$(arch)" or "$(uname -m)" to get and set the architecture type
+ARCH="arm64"
 EXT="tar.gz"
 
-RELEASE_URL="https://api.github.com/repos/amir1376/ab-download-manager/releases/latest"
-GITHUB_RELEASE_DOWNLOAD="https://github.com/amir1376/ab-download-manager/releases/download"
+# edit: modify URL to include 'petesimon/abdm-linux-arm64'
+RELEASE_URL="https://api.github.com/repos/petesimon/abdm-linux-arm64/releases/latest"
+GITHUB_RELEASE_DOWNLOAD="https://github.com/petesimon/abdm-linux-arm64/releases/download"
 
 LATEST_VERSION=$(curl -fSs "${RELEASE_URL}" | grep '"tag_name":' | sed -E 's/.*"tag_name": ?"([^"]+)".*/\1/')
 
@@ -155,6 +168,7 @@ delete_old_version() {
 }
 
 # --- Generate a .desktop file for the app
+# and make an icon on the user's Desktop screen in ~/Desktop/
 generate_desktop_file() {
     cat <<EOF > "$HOME/.local/share/applications/com.abdownloadmanager.desktop"
 [Desktop Entry]
@@ -163,12 +177,16 @@ Comment=Manage and organize your download files better than before
 GenericName=Downloader
 Categories=Utility;Network;
 Exec="$BINARY_PATH"
-Icon=$ICON_PATH
+Icon="$ICON_PATH"
 Terminal=false
 Type=Application
 StartupWMClass=com-abdownloadmanager-desktop-AppKt
 EOF
+
+    mkdir -p "$HOME/Desktop"
+    cp "$HOME/.local/share/applications/com.abdownloadmanager.desktop" "$HOME/Desktop/"
 }
+
 
 # --- Download the latest version of the app
 download_zip() {
@@ -207,9 +225,10 @@ install_app() {
 
     logger "AB Download Manager installed successfully"
     logger "it can be found in Applications menu or run '$APP_NAME' in terminal"
-    logger "Make sure $HOME/.local/bin exists in PATH"
     logger "installation logs saved in: ${LOG_FILE}"
-    
+    logger "Make sure $HOME/.local/bin exists in your PATH."
+    logger "You can add $HOME/.local/bin to your PATH in $HOME/.profile"
+    logger "Installation has finished"
 }
 
 # --- Check if the app is installed
