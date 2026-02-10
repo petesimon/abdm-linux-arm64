@@ -44,7 +44,7 @@ Please visit [Project Website](https://abdownloadmanager.com) for more info.
 <a href="https://abdownloadmanager.com"><img src="https://img.shields.io/badge/Official%20Website-897BFF?logo=abdownloadmanager&logoColor=fff&style=flat-square" alt="Official Website" height="32" /></a>
 <a href="https://github.com/petesimon/abdm-linux-arm64/releases"><img src="https://img.shields.io/badge/GitHub%20Releases-2a2f36?logo=github&logoColor=fff&style=flat-square" alt="GitHub Releases" height="32" /></a>
 
-#### Download a tar.gz file for Linux arm64 (aarch64) from the `Releases` page
+#### Download a tar.gz file for Linux arm64 (aarch64) from the `Releases` page OR use the script below
 
 A list of available files on github is in the [releases page HERE](https://github.com/petesimon/abdm-linux-arm64/releases)
 
@@ -55,7 +55,7 @@ After you download a tar.gz file, then extract the contents and navigate into th
 Copy the text below, then paste and run the command in a Terminal.
 
 ```bash
-bash < (curl -fsSL https://raw.githubusercontent.com/petesimon/abdm-linux-arm64/master/scripts/install.sh)
+bash <(curl -fsSL https://raw.githubusercontent.com/petesimon/abdm-linux-arm64/master/scripts/install.sh)
 ```
 
 > ⚠️ **Warning:** This software is NOT on Google Play or other app stores unless listed here. Any version **claiming to be or related to this project** should be considered SCAM and UNSAFE.
