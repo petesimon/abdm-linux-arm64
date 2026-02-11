@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Uninstall script for AB Download Manager
+# Modified by @petesimon https://github.com/petesimon
+
 set -euo pipefail
 # set -x
 
@@ -84,8 +87,9 @@ delete_app() {
     fi
 
     logger "removing $APP_NAME desktop file ..."
-    # --- Remove the .desktop file in ~/.local/share/applications
+    # --- Remove the .desktop file in ~/.local/share/applications and in ~/Desktop
     remove_if_exists "$HOME/.local/share/applications/com.abdownloadmanager.desktop"
+    remove_if_exists "$HOME/Desktop/com.abdownloadmanager.desktop"
 
     logger "removing $APP_NAME link ..."
     remove_if_exists "$HOME/.local/bin/$APP_NAME"
@@ -101,7 +105,9 @@ delete_app() {
         delete_app_config_dir
     fi
 
-    logger "AB Download Manager completely removed"
+    logger "AB Download Manager was completely removed."
+    logger "A log was saved as /tmp/ab-dm-uninstaller.log"
+    logger "Uninstallation of AB Downloader Manager has finished."
 }
 
 main() {
