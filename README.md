@@ -31,22 +31,23 @@ Also [donate](https://github.com/amir1376/ab-download-manager/blob/master/DONATE
 
 Report problems with Linux arm64 or just chat about whatever in the ["Discussions"](https://github.com/petesimon/abdm-linux-arm64/discussions) page.
 
-[![THE SYSTEM IS DOWN](https://img.youtube.com/vi/Gs1O9EEqEZs/mqdefault.jpg)](https://youtu.be/Gs1O9EEqEZs) *♫ ♪ THE SYSTEM IS DOWN ♫ ♪*
+[![♫ ♪ THE SYSTEM IS DOWN](https://img.youtube.com/vi/Gs1O9EEqEZs/mqdefault.jpg)](https://youtu.be/Gs1O9EEqEZs) *♫ ♪ THE SYSTEM IS DOWN ♫ ♪*
 
 ## Description
 
-[AB Download Manager](https://abdownloadmanager.com) is a desktop app that helps you manage and organize your downloads more efficiently than ever before.
+[AB Download Manager](https://abdownloadmanager.com) is a desktop app that helps you manage and organize your downloads more efficiently than ever before. This edition of the app shall install and work on up-to-date modern Linux arm64 distributions Ubuntu, Debian, Fedora, Raspberry Pi OS (Raspbian), Manjaro, Asahi, et cetera on armv8 aarch64 devices such as a Raspberry Pi, Orange Pi, Banana Pi, Pine64, Odroid, Khadas, NanoPi, Radxa Rock Pi, Snapdragon, Apple Silicon and others.
 
 ## Features
 
 - ⚡️ Faster Download Speed
+- 🧵 Mult-threaded download tasks
 - ⏰ Queues and Schedulers
 - 🌐 Browser Extensions
 - 💻 Multiplatform (Android / Windows / Linux / Mac)
 - 🌙 Multiple Themes (Dark/Light/Black and more) with modern UI
 - ❤️ Free and Open Source
 
-Please visit [Project Website](https://abdownloadmanager.com) for more info.
+Please visit the [Project Website](https://abdownloadmanager.com) for more info.
 
 ## Installation
 
@@ -69,11 +70,13 @@ Copy the text below, then paste and run the command in a Terminal.
 bash <(curl -fsSL https://raw.githubusercontent.com/petesimon/abdm-linux-arm64/master/scripts/install.sh)
 ```
 
+#### Warning message for Android
+
 > ⚠️ **Warning:** This software is NOT on Google Play or other app stores unless listed here. Any version **claiming to be or related to this project** should be considered SCAM and UNSAFE.
 
 For alternative installation methods, uninstallation instructions, and more details, please refer to the [wiki](https://github.com/amir1376/ab-download-manager/wiki/) page.
 
-### Browser Extensions
+### Browser Extensions for integration
 
 You can download the browser extension to integrate the app with your browser.
 
