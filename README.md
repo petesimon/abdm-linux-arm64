@@ -12,9 +12,13 @@
 
 ## TL;DR
 
-Just install it, and find in panel menu > Internet > AB Download Manager
+Just install it, and find the app in the panel menu > Internet > AB Download Manager
 ```bash
 curl -fsSL https://tinyurl.com/3m9pmdew | bash
+```
+or
+```bash
+wget -q -O - https://tinyurl.com/3m9pmdew | bash
 ```
 
 ## Sponsor or donate
