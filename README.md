@@ -10,6 +10,13 @@
     <a href="https://crowdin.com/project/ab-download-manager"><img alt="Crowdin" src="https://badges.crowdin.net/ab-download-manager/localized.svg"></a>
 </p>
 
+## TL;DR
+
+Just install it, and find in panel menu > Internet > AB Download Manager
+```bash
+curl -fsSL https://tinyurl.com/3m9pmdew | bash
+```
+
 ## Sponsor or donate
 
 Please [sponsor me in Github](https://github.com/sponsors/petesimon), or [donate to me](https://paypal.me/psvangorp) via paypal , or [donate to me](https://www.buymeacoffee.com/pitapitabread) via buymeacoffee. Thanks!
