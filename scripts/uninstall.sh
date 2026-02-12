@@ -3,6 +3,8 @@
 # Uninstall script for AB Download Manager
 # Modified by @petesimon https://github.com/petesimon
 
+# do 'bash <(wget -q -O - https://raw.githubusercontent.com/petesimon/abdm-linux-arm64/master/scripts/uninstall.sh)'
+
 set -euo pipefail
 # debug set -x
 #set -x
@@ -44,7 +46,6 @@ delete_app_config_dir() {
 
     local answer
     read -p "Do you want to continue? [Y/n]: " -r answer
-    #answer=${answer:-Y}  # Set default to 'Y' if no input is given
 
     case $answer in
         [Yy]* )
