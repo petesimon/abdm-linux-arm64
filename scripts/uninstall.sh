@@ -1,11 +1,11 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 # Uninstall script for AB Download Manager
 # Modified by @petesimon https://github.com/petesimon
 
 set -euo pipefail
-# set -x
-
+# debug set -x
+#set -x
 
 APP_NAME="ABDownloadManager"
 
@@ -44,7 +44,7 @@ delete_app_config_dir() {
 
     local answer
     read -p "Do you want to continue? [Y/n]: " -r answer
-    answer=${answer:-Y}  # Set default to 'Y' if no input is given
+    #answer=${answer:-Y}  # Set default to 'Y' if no input is given
 
     case $answer in
         [Yy]* )
