@@ -15,7 +15,7 @@ jobs:
   create-packages:
     strategy:
       matrix:
-        os: [ "ubuntu-latest" ]
+        os: [ "ubuntu-24.04-arm" ]
     runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout
@@ -68,7 +68,7 @@ jobs:
           name: app-${{ matrix.os }}
 
   release:
-    runs-on: "ubuntu-latest"
+    runs-on: "ubuntu-24.04-arm"
     needs: [ "create-packages" ]
     steps:
       - uses: "actions/download-artifact@v4"
