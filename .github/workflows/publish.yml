@@ -1,3 +1,4 @@
+name: publish for arm64
 on:
   push:
     tags:
