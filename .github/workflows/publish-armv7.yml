@@ -21,10 +21,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Set up JBR JDK 20 armv7
+      - name: Set up JDK armv7
         uses: actions/setup-java@v4
         with:
-          distribution: "jetbrains"
+          distribution: "temurin"
           java-package: "jdk"
           java-version: "20"
           architecture: "armv7"
