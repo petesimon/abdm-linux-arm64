@@ -1,3 +1,6 @@
+# *** NOTICE: This repository is not maintained
+## *** Consult the original author's repository at https://github.com/amir1376/ab-download-manager
+
 <div align="center">
     <img width="80" src="assets/logo/app_logo_with_background.svg" alt="AB Download Manager Logo">
 </div>
