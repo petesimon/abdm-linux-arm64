@@ -13,6 +13,7 @@ import ir.amirab.downloader.downloaditem.IDownloadItem
 import ir.amirab.downloader.exception.DownloadValidationException
 import ir.amirab.downloader.exception.PrepareDestinationFailedException
 import ir.amirab.downloader.exception.FileChangedException
+import ir.amirab.downloader.exception.ServerResumeSupportChangeException
 import ir.amirab.downloader.exception.TooManyErrorException
 import ir.amirab.downloader.part.*
 import ir.amirab.downloader.utils.*
@@ -214,6 +215,15 @@ class HttpDownloadJob(
                     supportsConcurrent != false
                 }
                 ?: IDownloadItem.LENGTH_UNKNOWN
+            // first we try to create the folder
+            // maybe the storage wasn't mounted yet, in that case we get an exception here
+            // it should be here to prevent resetting the download
+            try {
+                destination.prepareDestinationFolder()
+            } catch (e: Exception) {
+                e.throwIfCancelled()
+                throw PrepareDestinationFailedException(e)
+            }
             if (!destination.isDownloadedPartsIsValid()) {
                 //file deleted or something!
                 parts.forEach { it.resetCurrent() }
@@ -622,6 +632,17 @@ class HttpDownloadJob(
 
 //        thisLogger().info("fetchDownloadInfoAndValidate")
         val response = client.test(downloadItem).expectSuccess()
+
+        supportsConcurrent?.let { previouslyConcurrentWasSupported ->
+            if (previouslyConcurrentWasSupported && !response.resumeSupport) {
+                // server at some point tell us it supports resuming, and we created more than 1 part!
+                // and now it says not resuming isn't supported!
+                // we must stop here!
+                // user must manually restart download or we should retry
+                throw ServerResumeSupportChangeException()
+            }
+        }
+
         supportsConcurrent = response.resumeSupport
         serverLastModified = runCatching {
             response.lastModified?.let(TimeUtils::convertLastModifiedHeaderToTimestamp)
@@ -707,6 +728,7 @@ class HttpDownloadJob(
             }
         }
     }
+
     private var lastSavedDownloadItem: HttpDownloadItem? = null
     private var lastSavedParts: List<RangedPart>? = null
 
