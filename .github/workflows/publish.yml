@@ -1,0 +1,98 @@
+name: publish for arm64
+on:
+  push:
+    tags:
+      - "v[0-9]+.[0-9]+.[0-9]+*"
+  workflow_dispatch:
+
+
+permissions:
+  contents: write
+
+jobs:
+  create-packages:
+    strategy:
+      matrix:
+        os: [ "ubuntu-24.04-arm" ]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Set up JBR
+        uses: actions/setup-java@v4
+        with:
+          distribution: "jetbrains"
+          java-package: "jdk"
+          java-version: "21"
+          check-latest: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Cache Gradle Dependencies
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: ${{ matrix.os }}-gradle
+          enableCrossOsArchive: true
+
+      - name: Skip Android build
+        shell: "bash"
+        run: |
+          echo "SKIP_ANDROID_BUILD=true" >> $GITHUB_ENV
+
+      - name: Gradle
+        run: |
+          ./gradlew
+        shell: "bash"
+
+      - name: Build package for current OS using gradle
+        shell: bash
+        run: |
+          ./gradlew createReleaseFolderForCi
+
+      - name: Release Gradle to unlock cache files
+        shell: bash
+        run: |
+          ./gradlew -stop
+
+      - name: Upload output to artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          path: ./build/ci-release
+          name: app-${{ matrix.os }}
+
+  release:
+    runs-on: "ubuntu-24.04-arm"
+    needs: [ "create-packages" ]
+    steps:
+      - uses: "actions/download-artifact@v4"
+        name: "Download All Artifacts Into One Directory"
+        with:
+          path: release
+          pattern: app-*
+          merge-multiple: true
+
+      - name: Version Info
+        id: version
+        uses: nowsprinting/check-version-format-action@v3
+        with:
+          prefix: "v"
+
+      - name: "Show the output tree of release"
+        run: |
+          tree .
+      - uses: softprops/action-gh-release@v2
+        with:
+          prerelease: ${{ !steps.version.outputs.is_stable }}
+          make_latest: legacy
+          draft: true
+          files: |
+            release/binaries/*
+          body_path: release/release-notes.md
+      - name: "Remove artifacts to free space"
+        uses: geekyeggo/delete-artifact@v5
+        with:
+          name: app-*
