@@ -19,10 +19,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Set up JBR
+      - name: Set up java jdk
         uses: actions/setup-java@v4
         with:
-          distribution: "jetbrains"
+          distribution: "temurin"
           java-package: "jdk"
           java-version: "21"
           check-latest: true
